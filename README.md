@@ -74,6 +74,7 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 ├── tsconfig.json                       # Configurações do compilador TypeScript
 └── package.json                        # Dependências e scripts do projeto
 
+```
 
 ## 🛠️ Como executar o projeto localmente
 
