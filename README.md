@@ -74,11 +74,13 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 ├── tsconfig.json                       # Configurações do compilador TypeScript
 └── package.json                        # Dependências e scripts do projeto
 
-```markdown
+
 ## 🛠️ Como executar o projeto localmente
 
+```
+
 1. **Clone o repositório:**
-   ```bash
+```bash
    git clone git@github.com-pessoal:LeonardoFirme/project-correios.git
 
 ```
@@ -96,11 +98,8 @@ npm run dev
 
 ```
 
-
 4. **Acesse no navegador:** `http://localhost:3000`
 
 ---
 
 Desenvolvido por [Leonardo Firme](https://github.com/LeonardoFirme) 🚀
-
-```
