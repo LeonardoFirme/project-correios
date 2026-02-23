@@ -87,6 +87,7 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 2. **Instale as dependências:**
 ```bash
 npm install
+npm install @react-icons/all-files --save
 
 ```
 
