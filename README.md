@@ -87,17 +87,22 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 2. **Instale as dependências:**
 ```bash
 npm install
+
+```
+
+3. **Instale o pacote de icones:**
+```bash
 npm install @react-icons/all-files --save
 
 ```
 
-3. **Inicie o servidor de desenvolvimento:**
+4. **Inicie o servidor de desenvolvimento:**
 ```bash
 npm run dev
 
 ```
 
-4. **Acesse no navegador:** `http://localhost:3000`
+5. **Acesse no navegador:** `http://localhost:3000`
 
 ---
 
