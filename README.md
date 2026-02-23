@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## ⚠️ Aviso Legal (Disclaimer)
 
-## Getting Started
+Este projeto foi desenvolvido estritamente para **fins educacionais e de portfólio**. Ele consiste em um clone visual e estrutural do portal dos Correios para demonstrar habilidades em desenvolvimento web (Next.js, TypeScript e Tailwind CSS).
 
-First, run the development server:
+**Não possui vínculo com a Empresa Brasileira de Correios e Telégrafos** e **não deve ser utilizado para fins maliciosos**, phishing ou qualquer tentativa de fraude. Os dados consumidos nas rotas de frete e rastreio provêm de APIs públicas de terceiros e de simulações.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Clone dos Correios | Rastreamento, CEP e Frete 📦
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/Next.js_16+-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para simular e consumir os principais serviços oferecidos pelos Correios do Brasil. O projeto foi construído com foco em performance, tipagem estática e uma interface clássica e responsiva.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Funcionalidades
 
-## Learn More
+- **Rastreamento de Objetos:** Consulta em tempo real do status de encomendas utilizando a API pública do Link&Track.
+- **Busca de CEP:** Consulta dinâmica de endereços integrando a API pública e gratuita do ViaCEP.
+- **Cálculo de Preços e Prazos:** Simulação de cálculo de frete para as modalidades PAC e SEDEX baseada no peso e nos CEPs de origem e destino.
+- **Histórico de Buscas:** Armazenamento em memória das últimas consultas de rastreamento realizadas pelo usuário.
+- **Tratamento de Erros:** Feedback visual claro e amigável para o usuário em caso de falhas de rede, CEPs inválidos ou códigos inexistentes.
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Next.js 16+](https://nextjs.org/):** Framework React com App Router, Server Components e Route Handlers (APIs internas).
+- **[React](https://react.dev/):** Biblioteca para construção da interface de usuário.
+- **[TypeScript](https://www.typescriptlang.org/):** Tipagem estática para garantir segurança e previsibilidade dos dados recebidos das APIs.
+- **[Tailwind CSS v4](https://tailwindcss.com/):** Framework de utilitários CSS configurado estritamente com as classes nativas para estilização ágil e responsiva.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Estrutura Principal do Projeto
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+├── app/
+│   ├── api/              # Route Handlers (Endpoints de Rastreio, CEP, Frete e Histórico)
+│   ├── busca-cep/        # Página de consulta de endereços
+│   ├── precos-prazos/    # Página de cálculo de frete
+│   ├── layout.tsx        # Layout global
+│   └── page.tsx          # Página inicial (Dashboard de Rastreamento)
+├── components/           # Componentes de cliente (SearchTracking, SearchCep, FreightCalculator)
+├── services/             # Funções de fetch isoladas para comunicação com a API interna
+└── types/                # Interfaces TypeScript globais do domínio
