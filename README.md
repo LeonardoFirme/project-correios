@@ -78,8 +78,6 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 
 ## 🛠️ Como executar o projeto localmente
 
-```
-
 1. **Clone o repositório:**
 ```bash
    git clone git@github.com-pessoal:LeonardoFirme/project-correios.git
@@ -91,7 +89,6 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 npm install
 
 ```
-
 
 3. **Inicie o servidor de desenvolvimento:**
 ```bash
