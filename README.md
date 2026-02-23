@@ -30,13 +30,77 @@ Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para si
 ## 📂 Estrutura Principal do Projeto
 
 ```text
-src/
-├── app/
-│   ├── api/              # Route Handlers (Endpoints de Rastreio, CEP, Frete e Histórico)
-│   ├── busca-cep/        # Página de consulta de endereços
-│   ├── precos-prazos/    # Página de cálculo de frete
-│   ├── layout.tsx        # Layout global
-│   └── page.tsx          # Página inicial (Dashboard de Rastreamento)
-├── components/           # Componentes de cliente (SearchTracking, SearchCep, FreightCalculator)
-├── services/             # Funções de fetch isoladas para comunicação com a API interna
-└── types/                # Interfaces TypeScript globais do domínio
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── cep/route.ts            # Handler para consulta de endereços via ViaCEP
+│   │   │   ├── freight/route.ts        # Handler para cálculo de estimativas de frete
+│   │   │   ├── history/route.ts        # Handler para persistência de histórico de buscas
+│   │   │   └── tracking/route.ts       # Handler para integração com API de rastreio
+│   │   ├── (pages)/
+│   │   │   ├── busca-cep/page.tsx      # Interface completa de busca de CEP
+│   │   │   └── precos-prazos/page.tsx  # Interface do simulador de envios
+│   │   ├── favicon.ico                 # Ícone da aba do navegador
+│   │   ├── globals.css                 # Importações do Tailwind CSS v4 e temas
+│   │   ├── layout.tsx                  # Estrutura principal com Providers e Viewport
+│   │   └── page.tsx                    # Landing Page com busca de rastreio inicial
+│   ├── components/
+│   │   ├── DynamicBanner.tsx           # Slider de banners interativo com autoplay
+│   │   ├── FreightCalculator.tsx       # Componente principal de cálculo de frete
+│   │   ├── HomeFreightForm.tsx         # Formulário de frete simplificado para a Home
+│   │   ├── QuickAccessGrid.tsx         # Grade de ícones para acesso rápido
+│   │   ├── SearchCep.tsx               # UI de busca e resultado de endereço
+│   │   ├── SearchTracking.tsx          # Motor de busca com timeline de status
+│   │   └── TrackingSearchBox.tsx       # Input especializado para códigos de rastreio
+│   ├── hooks/
+│   │   └── useTracking.ts              # Hook customizado para gerenciar estados de rastreio
+│   ├── layouts/
+│   │   ├── Footer.tsx                  # Rodapé institucional responsivo
+│   │   └── Header.tsx                  # Cabeçalho padrão Gov.br com navegação
+│   ├── proxy.ts                        # Configuração de proxying para Next.js 16+
+│   ├── services/
+│   │   ├── cepService.ts               # Camada de abstração para fetch de endereços
+│   │   ├── historyService.ts           # Camada de abstração para histórico do usuário
+│   │   └── trackingService.ts          # Camada de abstração para status de objetos
+│   └── types/
+│       ├── cep.ts                      # Interfaces de dados para endereços
+│       ├── freight.ts                  # Interfaces para modalidades de envio
+│       ├── history.ts                  # Interfaces para persistência de dados
+│       └── tracking.ts                 # Interfaces para eventos de rastreamento
+├── public/
+│   ├── banners/                        # Imagens 1.png, 2.png e 3.png do slider
+│   ├── file.svg, globe.svg...          # Ativos estáticos e ícones de marca
+├── postcss.config.mjs                  # Configurações de pós-processamento de CSS
+├── tsconfig.json                       # Configurações do compilador TypeScript
+└── package.json                        # Dependências e scripts do projeto
+
+```markdown
+## 🛠️ Como executar o projeto localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone git@github.com-pessoal:LeonardoFirme/project-correios.git
+
+```
+
+2. **Instale as dependências:**
+```bash
+npm install
+
+```
+
+
+3. **Inicie o servidor de desenvolvimento:**
+```bash
+npm run dev
+
+```
+
+
+4. **Acesse no navegador:** `http://localhost:3000`
+
+---
+
+Desenvolvido por [Leonardo Firme](https://github.com/LeonardoFirme) 🚀
+
+```
