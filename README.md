@@ -10,6 +10,8 @@ Este projeto foi desenvolvido estritamente para **fins educacionais e de portfó
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+![Demonstração do Template](./template.png)
+
 Uma aplicação web full-stack (Front-end + Route Handlers) desenvolvida para simular e consumir os principais serviços oferecidos pelos Correios do Brasil. O projeto foi construído com foco em performance, tipagem estática e uma interface clássica e responsiva.
 
 ## 🚀 Funcionalidades
